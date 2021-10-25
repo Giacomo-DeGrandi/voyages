@@ -1,0 +1,276 @@
+/*  If you have not heard about that before, it represents an element that has received focus 
+or contains an element that has received focus. So, for example, you have a <div> and inside 
+of it is an input element. 
+If you want to style that <div> when the contained input has focus, 
+you can do it like so:
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=GFS+Didot&family=Zen+Maru+Gothic&display=swap');
+ /* css rule:  font-family: 'GFS Didot', serif; */  
+ /* css rule:  font-family: 'Delius Unicase', cursive; */ 
+ /* css rule:  font-family: 'Zen Maru Gothic', sans-serif; */   
+
+:root {
+	--fontgen:'Zen Maru Gothic', sans-serif;
+	--fontlogo:'Delius Unicase', cursive;
+	--fontgrece:'GFS Didot', serif;
+	--fontsizetitle: 3em;
+	--fontsizesubtitle: 1.5em;
+	--fontsizegeneral: 1.2em;
+	--fontsizegeneralmed: 1em;
+	--fontsizedetails: 0.8em;
+	--bluedeep: #284177;
+	--blue: #006BBD;
+	--azur: #83CEEC;
+	--beige: #EDE8E4;
+	--deepbeige: #C2AFA8;
+	--white: #ffffff;
+	--black: #000000;
+	--textshad1: 2px 4px 4px rgba(0,0,0,0.2),
+                 0px -5px 10px rgba(255,255,255,0.15);
+}
+
+
+body {
+	padding: 0px;
+    margin: 0px;
+	font-size: 16px;
+	font-family: var(--fontgrece);
+}
+
+a {
+	text-decoration: none;
+	color: whitesmoke;
+
+}
+
+header {
+	background-color: var(--beige) ;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	max-height: 10%;
+}
+
+nav {
+	max-width: 100%;
+	background-color: var(--beige);
+	display: flex;
+	justify-content: space-around;
+	max-height: 100%;
+}
+
+#headerlogo {
+	font-family: 'Delius Unicase', cursive;
+	color: var(--white);
+	font-size: 2.5em;
+}
+
+
+.menu1 {
+	background-color: var(--beige);
+	display: none;
+	position: absolute;
+}
+
+
+.menu2 {
+	background-color: var(--beige);
+	display:none;
+	position: absolute;
+
+}
+
+.flexmenu {
+	display: flex;
+	flex-direction: column ;
+}
+
+
+.menulabel:hover .menu1 {
+	background-color: var(--deepbeige);
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.menulabel2:hover .menu2 {
+	background-color: var(--deepbeige);
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+/* personal main */
+
+.mainpicgrece {
+		background-image: url("../pics/grecemain.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.titlesonpic {
+	background-image: url("../pics/grecemain.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	height: 70vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+
+}
+
+.titlesonpic h1 {
+		background-color: rgba(0, 0, 0, .3) ;
+		padding: 10vh;
+		font-weight: 400;
+		font-size: var(--fontsizetitle);
+		font-family: var(--fontgrece);
+		color: var(--white);
+		text-shadow: var(--textshad);
+}
+
+.linksonpics {
+		background-color: rgba(0, 0, 0, .3) ;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 8vh;
+		font-family: var(--fontgen);
+		font-size: var(--fontsizesubtitle);
+}
+
+.linksonpics a {
+	padding: 4vh;
+
+
+}
+
+.linksonpics a:hover {
+		background-color: rgba(0, 0, 0, .3);
+		padding: 4vh;
+		transition: 0.2;
+
+}
+
+.details {
+	color: var(--azur);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+}
+
+/* article and aside */
+
+.wrapperdiv {
+	display: flex;
+
+}
+
+#articlegrece p {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+}
+
+#articlegrece {
+	padding: 10vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#articlegrece img {
+	width: 110vh;
+
+}
+
+.centerdiv {
+	display: flex;
+	flex-direction: column;
+}
+
+#greceaside img {
+	width: 50vh;
+}
+
+#greceaside p:hover {
+	text-decoration-line: underline;
+	color: var(--blue);
+}
+
+#greceaside {
+	padding: 10vh;
+}
+
+#greceaside a {
+	padding: 10vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--black);
+}
+
+/* cards */
+
+.cardsection {
+	padding: 10vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.cardsection h2 {
+	padding: 2vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneralmed);
+}
+
+.bkgcards tr td {
+	padding: 5vh;
+}
+
+.bkgcards tr td:hover {
+	border: solid  0.1vh var(--azur);
+}
+
+.bkgcards a {
+	color: black;
+}
+
+.bkgcards a span {
+	font-family: var(--fontgrece);
+	color: var(--white);
+	background-color: var(--black);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+}
+
+.bkgcards a span:hover {
+	font-family: var(--fontgrece);
+	color: var(--bluedeep);
+	background-color: var(--white);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+	transition: 0.2;
+}
+
+.cardimgcrop {
+	width: 45vh;
+	height: 30vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.cardimgcrop img {
+	width: 55vh;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--beige);
+	padding: 0vh;
+	border-radius: 2vh;
+}
