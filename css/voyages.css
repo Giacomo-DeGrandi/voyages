@@ -1,0 +1,84 @@
+/*  If you have not heard about that before, it represents an element that has received focus 
+or contains an element that has received focus. So, for example, you have a <div> and inside 
+of it is an input element. 
+If you want to style that <div> when the contained input has focus, 
+you can do it like so:
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');   /* css rule:  font-family: 'Delius Unicase', cursive; */  
+
+:root {
+	--fontlogo:'Delius Unicase', cursive;
+	--fonttitle: ;
+}
+
+
+body {
+	padding: 0px;
+    margin: 0px;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: whitesmoke;
+
+}
+
+header {
+	background-color: green ;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	height: 20vh;
+}
+
+nav {
+	width: 100%;
+	background-color: blue;
+	display: flex;
+	justify-content: space-around;
+	height: 15vh;
+}
+
+#headerlogo {
+	font-family: 'Delius Unicase', cursive;
+	color: whitesmoke;
+	font-size: 2.5em;
+
+}
+
+
+.menu1 {
+	background-color: red;
+	display: none;
+	position: absolute;
+}
+
+
+.menu2 {
+	background-color: red;
+	display:none;
+	position: absolute;
+
+}
+
+.flexmenu {
+	display: flex;
+	flex-direction: column ;
+}
+
+
+.menulabel:hover .menu1 {
+	background-color: rebeccapurple;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.menulabel2:hover .menu2 {
+	background-color: rebeccapurple;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
