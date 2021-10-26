@@ -89,7 +89,7 @@ nav {
 }
 
 
-/* personal main */
+/* personal main grece */
 
 #maingrece h3 {
 	padding: 2vh;
@@ -155,34 +155,31 @@ nav {
 	font-size: var(--fontsizedetails);
 }
 
-/* article and aside */
+/* articles */
 
-.articlewrapperdiv {
+[class^="articlewrapperdiv"] {			/* ce trick m'aide pas mal pour les truc ripetitifs ( en fait quand je l'ai decouvert ç' etait un'epiphanie! ) */
 	display: flex;
 
 }
 
-#articlegrece p {
+[id^="articlex"] p {
 	font-family: var(--fontgen);
 	font-size: var(--fontsizegeneral);
 }	
 
 
-#articlegrece {
+[id^="articlex"] {
 	padding: 10vh;
 	display: flex;
 	flex-direction: column;
 }
 
-#articlegrece img {
+[id^="articlex"] img {
 	width: 100vh;
 
 }
 
-.centerdiv {
-	display: flex;
-	flex-direction: column;
-}
+/* asides */
 
 #greceaside img {
 	width: 50vh;
@@ -259,11 +256,21 @@ nav {
 	transition: 0.2s;
 }
 
-[id^="wrapmodal"] {			/* ce trick m'aide pas mal */
+[id^="wrapmodal"] {	
 	display: none;
 }
 
-#wrapmodal:target, #wrapmodal2:target, #wrapmodal3:target, #wrapmodal4:target,    /* ici [id^="wrapmodal"]:target ne marche pas, je ne sais pas porquoi ?? */
+																				/*  ici [id^="wrapmodal"]:target ne marche pas, je ne suis pas sur mais
+																					je crois que c'est liée au fait que il y à deja des id 'wrapmodalform'
+																					donc je douvrais au moins ajouter une 'x' (ea wrapmodal-x-num ). 
+																					J'aurais voulu trouver une fonction pour le faire et j'ai recherché 
+																					sur les pseudo-elements ::before ::after avec l'utilisation de 'content'
+																					mais apparemment c'est n'est pas possible de ajouter seulement une partie
+																					interieure aux attributs. (je suis sur que c'est possible mais pour 
+																					l'instant je n'ai pas encore trouvé la solution en css.)
+}																				*/
+																	
+#wrapmodal:target, #wrapmodal2:target, #wrapmodal3:target, #wrapmodal4:target,
 #wrapmodal5:target, #wrapmodal6:target {
 	width: 100%;
 	display: block;
@@ -360,3 +367,4 @@ nav {
 	background-color: var(--bluedeep);
 	z-index: 3;
 }
+
