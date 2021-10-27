@@ -17,9 +17,11 @@ you can do it like so:
 	--fontgrece:'GFS Didot', serif;
 	--fontsizetitle: 3em;
 	--fontsizesubtitle: 1.5em;
+	--fontsizesubtitle2: 2em;
 	--fontsizegeneral: 1.2em;
 	--fontsizegeneralmed: 1em;
 	--fontsizedetails: 0.8em;
+	--colorscreen: rgba(40, 65, 119, 0.9);
 	--bluedeep: #284177;
 	--blue: #006BBD;
 	--azur: #83CEEC;
@@ -105,19 +107,27 @@ nav {
 }
 
 .titlesonpic {
-	background-image: url("../pics/grecemain.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	max-width: 100%;
-	height: 70vh;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+		display: flex;
+		justify-content: safe flex-end;
 
+		
+		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
 .titlesonpic h1 {
+
 		background-color: rgba(0, 0, 0, .3) ;
 		padding: 10vh;
 		font-weight: 400;
@@ -134,7 +144,7 @@ nav {
 		justify-content: space-evenly;
 		padding: 3vh;
 		font-family: var(--fontgen);
-		font-size: var(--fontsizesubtitle);
+		font-size: var(--fontsizesubtitle2);
 }
 
 .linksonpics a {
@@ -150,10 +160,16 @@ nav {
 
 }
 
-.details {
+.details {												/* details */
 	color: var(--azur);
 	text-shadow: var(--textshad);
 	font-size: var(--fontsizedetails);
+}
+
+.picstitles {
+	color: var(--black);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizesubtitle);
 }
 
 /* articles */
@@ -162,14 +178,68 @@ nav {
 	display: flex;
 }
 
+.articlewrapperdivathene {
+	display: flex;
+	flex-direction: column;
+}
+
+.articlewrapperdivcrete {
+	margin-top: 10vh;
+}
+
+.asideleft {
+	display: flex;
+}
+
+[id^="bkgarticleimage"] {
+	background-image: url("../pics/athene/athenearticle3.jpg") ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: var(--colorscreen);
+	background-blend-mode: screen, darken;                                  /* styling background-image */
+	height: 80vh;
+}
+
+[id^="bkgarticleimage"] span {
+		color: var(--white);
+}
+
+[id^="bkgarticleimage"] p, [id^="bkgarticleimage"] h2 {
+	padding: 8vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+	width: 120vh;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
 [id^="articlex"] p {
 	font-family: var(--fontgen);
 	font-size: var(--fontsizegeneral);
+											/*je l'ai copié mais bon, je suis
+											 sur qui va marcher sur plein des browsers (est-ce que 
+											 je douvrais ajouter les keyframes expres pour les 
+											 browser?) */
+
+	will-change: scroll-position, fadein, opacity;
+	    							
+	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }	
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 [id^="articlex"] h1 {
 	font-family: var(--fontgen);
-	font-size: var(--fontsizesubtitle);
+	font-size: var(--fontsizesubtitle2);
 	background-color: var(--azur);
 	color: var(--white);
 
@@ -177,7 +247,7 @@ nav {
 
 [id^="articlex"] h1:hover {
     transition: 1s;
-    left: 0;
+	color:var(--bluedeep) ;
 }
 
 [id^="articlex"] h2 {
@@ -194,6 +264,7 @@ nav {
 
 [id^="articlex"] img {
 	width: 90vh;
+	margin-top: 10vh;
 }
 
 [id^="articlex"] img:hover {
@@ -201,6 +272,7 @@ nav {
 }
 
 /* buger le text et images dans les article */
+
 
 [class$="imgflex"] {
 	display: flex;
@@ -214,11 +286,32 @@ nav {
 	padding: 2vh;
 }
 
+/* oveflowgallery modules */
 
-/* asides */
+.oveflowgallery {
+	display: flex;
+	overflow-x: scroll;
+	width: 180vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-image: url("../pics/crete/crete6.jpg");
+	object-fit: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-blend-mode: darken, screen;
+
+}
+
+.galleryflexdetails {
+	display: flex;
+	flex-direction: column;
+	object-fit: cover;
+	padding: 2vh;
+}
+
+/* asides   -ax  */
 
 
-[id$="ax"] img { 
+[id$="ax"] img {     
 		width: 50vh;
 }
 
@@ -230,6 +323,7 @@ nav {
 [id$="ax"] {
 	padding: 10vh;
 }
+
 
 [id$="ax"] a {
 	padding: 10vh;
@@ -293,7 +387,7 @@ nav {
 .bkgcards a span:hover {
 	font-family: var(--fontgrece);
 	color: var(--white);
-	background-color: var(--black);
+	background-color: var(--bluedeep);
 	padding: 2vh;
 	border: solid  0.1vh var(--azur);
 	transition: 0.2s;
