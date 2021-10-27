@@ -22,6 +22,7 @@ you can do it like so:
 	--fontsizegeneralmed: 1em;
 	--fontsizedetails: 0.8em;
 	--colorscreen: rgba(40, 65, 119, 0.9);
+	--colorscreenblack: rgba(0, 0, 0, 0.7);
 	--bluedeep: #284177;
 	--blue: #006BBD;
 	--azur: #83CEEC;
@@ -192,7 +193,7 @@ nav {
 }
 
 [id^="bkgarticleimage"] {
-	background-image: url("../pics/athene/athenearticle3.jpg") ;
+
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -201,8 +202,31 @@ nav {
 	height: 80vh;
 }
 
+#bkgarticleimagex {
+		background-image: url("../pics/athene/athenearticle3.jpg") ;   /* Exarchia */
+}
+
+#bkgarticleimagexzante {														/* Zante */
+		background-image: url("../pics/zante/zante1.jpg") ;
+		background-attachment: local;
+}
+
+#bkgarticleimagexgrece {														/* grece */
+		background-image: url("../pics/mainpic3.jpg") ;
+		width: 100%;
+}
+
+
 [id^="bkgarticleimage"] span {
 		color: var(--white);
+}
+
+[id^="bkgarticleimage"] h1 {
+		font-family: var(--fontgen);
+		font-size: var(--fontsizetitle);
+		color: var(--white);
+		background-color: var(--colorscreenblack);
+		padding: 3vh;
 }
 
 [id^="bkgarticleimage"] p, [id^="bkgarticleimage"] h2 {
@@ -219,7 +243,7 @@ nav {
 	font-size: var(--fontsizegeneral);
 											/*je l'ai copié mais bon, je suis
 											 sur qui va marcher sur plein des browsers (est-ce que 
-											 je douvrais ajouter les keyframes expres pour les 
+											 je douvrais ajouter les keyframes express pour les 
 											 browser?) */
 
 	will-change: scroll-position, fadein, opacity;
@@ -292,7 +316,7 @@ nav {
 	display: flex;
 	overflow-x: scroll;
 	width: 180vh;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 	background-image: url("../pics/crete/crete6.jpg");
 	object-fit: contain;
 	background-attachment: fixed;
