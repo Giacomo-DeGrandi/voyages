@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+nav {
+    background-image: url("../images/etatsunis1.jpg");
+    height: 550px;
+}
+
+.presentation h1 {
+    margin-top: 3%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentation h2 {
+    text-align: center;
+    color: red;
+}
+
+.presentation p {
+    text-align: center;
+}
+
+.main {
+    margin: 20px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+}
+
+.cards .card {
+    margin-right: 20px;
+    box-shadow: 0 0px 50px;
+}
+
+.cards .card img {
+    width: 420px;
+    display: flex;
+}
+
+.cards .card .card-header{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.cards .card .card-header .title {
+    font-size: 20px;
+    margin-top: 3%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cards .card .card-body {
+    margin-left: 3%;
+}
+
+footer {
+    background-color: blue;
+}
+
+footer ul li a {
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+button {
+    margin-left: 5em;
+}
+
+
