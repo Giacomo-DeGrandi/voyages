@@ -4,6 +4,11 @@
     font-family: 'Bebas Neue', cursive;
 }
 
+nav {
+    background-image: url("../images/statue-de-la-liberté.jpg");
+    height: 500px;
+}
+
 .main h1 {
     font-size: 40px;
     margin-top: 3%;
@@ -24,6 +29,17 @@
     width: 50%;
     box-shadow: 0 15px 50px;
     margin-left: 20px;
+    transition: .5s;
+    animation: slidedown 10s;
+}
+
+.main aside img:hover {
+    margin-top: 3%;
+    float: right;
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    margin-left: 20px;
+    transform: scale(1.1);
 }
 
 .main article {
@@ -42,6 +58,15 @@
     width: 50%;
     box-shadow: 0 15px 50px;
     float: right;
+    transition: .5s;
+    animation: slidedown 10s;
+}
+
+.main-night aside img:hover {
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    float: right;
+    transform: scale(1.1);
 }
 
 .main-night article {
@@ -62,10 +87,27 @@
     justify-content: center;
 }
 
+.main-visite h2 {
+    margin-top: 3%;
+    margin-left: 10px;
+}
+
 .main-visite img {
     margin-top: 1%;
-    width: 50%;
+    width: 500px;
+    height: 300px;
     margin-left: 10px;
+}
+
+@keyframes slidedown {
+    form {
+        transform:translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .main-visite article {
@@ -95,7 +137,8 @@
 }
 
 .cards .card img {
-    width: 420px;
+    width: 500px;
+    height: 300px;
     display: flex;
 }
 
