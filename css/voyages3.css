@@ -13,7 +13,7 @@ you can do it like so:
 
 :root {
 	--fontgen:'Zen Maru Gothic', sans-serif;
-	--fontlogo:'Delius Unicase', cursive;
+	--fontlogo: 'Rubik Mono One', sans-serif;
 	--fontgrece:'GFS Didot', serif;
 	--fontsizetitle: 3em;
 	--fontsizesubtitle: 1.5em;
@@ -36,66 +36,25 @@ you can do it like so:
     --generalshad:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-
 body {
+	margin: 0;
+	padding: 0;
 	overflow-x: hidden;
-	padding: 0px;
-    margin: 0px;
-	font-size: 16px;
-	font-family: var(--fontgrece);
 }
 
 a {
 	text-decoration: none;
-	color: whitesmoke;
-
-}
-
-header {
-	background-color: var(--beige) ;
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	max-height: 10%;
-}
-
-nav {
-	max-width: 100%;
-	background-color: var(--beige);
-	display: flex;
-	justify-content: space-around;
-	max-height: 100%;
-}
-
-#headerlogo {
-	font-family: 'Delius Unicase', cursive;
 	color: var(--white);
-	font-size: 2.5em;
-}
-
-.flexmenu {
-	display: flex;
-	flex-direction: column ;
-}
-
-.menu1, .menu2  {
-	background-color: var(--beige);
-	display: none;
-	position: absolute;
-}
-
-
-.menulabel:hover .menu1, .menulabel2:hover .menu2 {
-	background-color: var(--deepbeige);
-	display: block;
-	position: relative;
-	z-index: 2;
 }
 
 
 /* personal main grece */
 
-#maingrece h3 {
+#maingrece h5 {
+	font-size: var(--fontsizesubtitle);
+	background-color: var(--bluedeep);
+	font-family: var(--fontgen);
+	color: var(--white);
 	padding: 2vh;
 
 }
@@ -209,6 +168,11 @@ nav {
 #bkgarticleimagexzante {														/* Zante */
 		background-image: url("../pics/zante/zante1.jpg") ;
 		background-attachment: local;
+}
+
+#bkgarticleimagexzante2 {														/* Zante fin */
+		background-image: url("../pics/zante/zante4.webp") ;
+		background-attachment: fixed;
 }
 
 #bkgarticleimagexgrece {														/* grece */
@@ -339,10 +303,25 @@ nav {
 		width: 50vh;
 }
 
-[id$="ax"] p:hover {
-	text-decoration-line: underline;
-	color: var(--blue);
+[id$="ax"] h1{
+	font-family: var(--fontgrece);
+	font-size: var(--fontsizesubtitle);
+	color: var(--black);
 }
+
+
+[id$="ax"] h2{
+	font-family: var(--fontgrece);
+	font-size: var(--fontsizegeneral);
+	color: var(--black);
+}
+
+[id$="ax"] p {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneralmed);
+	color: var(--black);
+}
+
 
 [id$="ax"] {
 	padding: 10vh;

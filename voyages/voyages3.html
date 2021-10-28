@@ -4,41 +4,116 @@
 <title>La Grèce - Voyages  </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/voyages3.css">     
+<link rel="stylesheet" href="../css/voyages3.css"> 
+<link rel="stylesheet" href="../css/voyages.css">     
 </head>
 <body>
 <header>
-	<nav>
-		<span id="headerlogo">
-			Voyages
-		</span>
-		<div  class="menulabel"> 
-			<span>
-				continent
-			</span>
-			<div class="menu1">
-				<div class="flexmenu">
-					<a href="voyage/voyage1.html" name="etatsunis" target="_top">Etats Unis</a>
-					<a href="voyage/voyage1.html" name="europe" target="_top">Europe</a>
-					<a href="voyage/voyage1.html" name="asie" target="_top">Asie</a>
-				</div>
-			</div>
-		</div>
-		<div class="menulabel2">
-			<span>
-				personne
-			</span>
-			<div class="menu2">
-					<div class="flexmenu">
-						<a href="voyage/voyage1.html" name="feriale" target="_top">Feriale</a>
-						<a href="voyage/voyage1.html" name="omar" target="_top">Omar</a>
-						<a href="voyage/voyage1.html" name="giacomo" target="_top">Giacomo</a>
+	<nav class="navbar1"> <!-- dropdown -->
+		<span id="logo">&#160; Voyages </span>
+		<div class="menulist"> <!-- dropbtn -->
+					<span>continent </span> 
+						<div class="continentsx"> <!--dropdown-content -->
+							Amérique <br>du Nord 🡲
+							<div class="paysx">
+								États Unis 🡳 
+								<div class="villesx">
+										<a href="#">
+											&#160; Los Angeles 🡶
+										</a>
+										<a href="#">
+											&#160; New York 🡶
+										</a>
+								</div> <!-- villesx1 -->
+							</div>  <!-- paysx -->
+						</div> <!--continentsx-->
+						<div class="continentsx">
+							&#160; Asia 🡲
+							<div class="paysx">
+								<a href="#">
+									Indonésie &#160; 🡶
+								</a>
+							</div>
+						</div>
+					<div class="continentsx">
+						&#160; Europe 🡲
+						<div class="paysx">
+							 Grèce &#160; 🡳
+								<div class="villesx2">
+									<div>
+										<a href="#">
+											&#160; Athène 🡶
+										</a>
+									</div>
+									<div>
+										<a href="#">
+											&#160; Crète 🡶
+										</a>
+									</div>
+									<div>
+										<a href="#">
+											&#160; Zante 🡶
+										</a>
+									</div>
+								</div>
+						</div>
 					</div>
-			</div>
-		</div>
+
+		</div> <!--menulist -->
+		<div class="menulist2">
+					<span>team </span> 
+						<div class="personnesx"> 
+							feriale &#160; 🡲
+							<div class="paysx">
+								asie &#160;  🡳
+								<div class="villesx">
+									<div>
+										<a href="#">
+										&#160; Indonésie 🡶
+										</a>
+									</div>
+								</div> <!-- villesx1 -->
+							</div>  <!-- paysx -->
+						</div> <!--personnesx-->
+						<div class="personnesx">
+						Giacomo &#160; 🡲
+						<div class="paysx">
+							Grèce &#160;  🡳
+								<div class="villesx">
+									<a href="#">
+											 Athène 🡶
+									</a>
+									<a href="#">
+										Crète 🡶
+									</a>
+									<a href="#">
+										 Zante 🡶
+									</a>
+								</div>
+						</div>
+					</div>
+						<div class="personnesx"> 
+							Omar &#160; 🡲
+							<div class="paysx">
+								Etats Unis 🡳
+								<div class="villesx">
+									<div>
+										<a href="#">
+										Los Angeles 🡶
+										</a>
+									</div>
+									<div>
+										<a href="#">
+										New York 🡶
+										</a>
+									</div>
+								</div> <!-- villesx1 -->
+							</div>  <!-- paysx -->
+						</div> <!--personnesx-->
+		</div> <!--menulist2 -->		
 	</nav>
 </header>  <!--fin header -->
-<main id="maingrece">main
+<main id="maingrece">
 	<div class="mainpicgrece">
 		<div class="titlesonpic">
 			<h1> La Grèce <br>
@@ -80,30 +155,36 @@
 			<aside id="greceax">
 				<div>
 					<hr>
-					<h3>
+					<h1>
 						Plus sur la grèce
-					</h3>
+					</h1>
 					<hr>					
 					<a href="#articlexathene" name="athene" target="_top">
-						<p>Athène	
+						<h3>Athène	</h3>
 							<img src="../pics/athens.webp" alt="athenspicsside" id="athenspicside">
-							<br>Avec grâce, Athène c'est un mix d'histoire et du 'contemporary cool'
+							<br>
+						<p>
+							Avec grâce, Athène c'est un mix d'histoire et du 'contemporary cool'
 								&#160;&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
 						</p>
 					</a>
 					<hr>
 					<a href="voyage/voyage1.html" name="crete" target="_top">
-						<p>Crète	
+						<h3>Crète	</h3>
 							<img src="../pics/crete1.jpg" alt="cretepicsside" id="cretepicside">
-							<br>Crète, ses plage, ses paysage et ses trèsor
+							<br>
+						<p>
+							Crète, ses plage, ses paysage et ses trèsor
 								&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
 						</p>
 					</a>
 					<hr>
 					<a href="voyage/voyage1.html" name="zante" target="_top">
-						<p>Zante	
+						<h3>Zante </h3>	
 							<img src="../pics/zante1.webp" alt="cretepicsside" id="zantepicside">
-							<br>Zante, la capitale de Zakynthos
+							<br>
+						<p>
+							Zante, la capitale de Zakynthos
 								&#160;&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
 						</p>
 					</a>
@@ -122,9 +203,9 @@
 					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 					<span class="details"> AinsiParlaitZarathoustra © Flickr </span>
 
-				</div> <!-- bkgarticleimagex -->
-		<hr><h3>Experiences</h3><hr>     <!-- parallax effext pour finir l'article grece -->
-	<section class="cardsection">
+				</div> <!-- bkgarticleimagex -->  <!-- parallax effext pour finir l'article grece -->
+	<hr><h5>Experiences</h5><hr> <!-- attention c'est directement apres main -->
+	<section class="cardsection">  
 		<table class="bkgcards">
 			<tr>
 				<td>
@@ -501,33 +582,42 @@
 			<aside id="asideatheneax">
 				<div>
 					<hr>
-					<h3>
-						Plus d'articles sur ce Site
-					</h3>
+					<h1>
+						Infos Pratiques
+					</h1>
 					<hr>					
-					<a href="voyage/voyage1.html" name="athene" target="_top">
-						<p>	Feriale
-							<img src="../pics/athens.webp" alt="athenspicsside" id="athenspicside">
-							<br>Avec grâce, Athens c'est un mix d'histoire et du 'contemporary cool'
-								&#160;&#160;&#160;  〉         <!-- ⇥ ﹀ 〉  mes icons  --> 
+						<h2>Formalités d'entrée</h2>
+
+						<p>
+							Aucun visa pour les ressortissants européens et les Suisses. Pas de visa pour les Canadiens séjournant au plus trois mois.
 						</p>
-					</a>
+
 					<hr>
-					<a href="voyage/voyage1.html" name="crete" target="_top">
-						<p>États Unis	
-							<img src="../pics/crete1.jpg" alt="cretepicsside" id="cretepicside">
-							<br>Crète, ses plage, ses paysage et ses trèsor
-								&#160;&#160;  〉      
+						<h2>Langue</h2>
+
+						<p>
+							Grec
 						</p>
-					</a>
+					
 					<hr>
-					<a href="voyage/voyage1.html" name="zante" target="_top">
-						<p>About us
-							<img src="../pics/zante1.webp" alt="cretepicsside" id="zantepicside">
-							<br>Zante, la capitale de Zakynthos
-								&#160;&#160;&#160;  〉    
+						<h2>Décalage horaire</h2>
+							
+						<p>
+							GMT/UTC + 2h en hiver (+ 3h en été).
 						</p>
-					</a>
+					
+					<hr>
+						<h2>Adresses et numéros utiles</h2>
+							
+						<p>
+							Ambassade à l'étranger:<br><br>
+							Léoforos Vassilissis Sofias 7, 10671 Athènes – tél. +30 (2)10 339 1000 ; fax. +30 (2)10 339 1009 ; www.ambafrance-gr.org<br><br>
+ 
+ 
+							Ambassade en France:<br><br>
+							17, rue Auguste-Vacquerie, 75116 Paris – tél. +33 (0)1 47 23 72 28 ; fax. +33 (0)1 47 23 73 85 ; www.amb-grece.fr
+						</p>
+					
 					<hr>
 				</div>
 			</aside>
@@ -649,7 +739,7 @@
 					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 			</div> <!-- bkgarticleimagex parallax effect comme introduction à zante -->
-		<section class="articlewrapperdivzante">
+	<section class="articlewrapperdivzante">
 		<article id="articlexzante">
 					<p>La ville de Zante est la capitale et le centre commercial de toute l’île de Zakynthos (qui porte également le nom de Zante). Bien que ce soit une destination populaire pour les visiteurs séjournant sur l’île, ce n’est pas une destination balnéaire, mais plutôt une ville portuaire animée. La plupart des gens optent pour des vacances en bord de mer dans d’autres villes côtières comme Laganas, Tsilivi et Psarou, et viennent visiter Zante le temps d’une journée.</p>
 
@@ -660,54 +750,61 @@
 
 					<img src="../pics/zante/zante2.webp" alt="zante2">
 					<span class="details"> © bouger-voyager.com </span>
-
-				<div id="bkgarticleimagexzante">
-					<p>
-					La Grèce centrale recèle au moins trois sites remarquables. “Centre du monde” pour les Grecs anciens, le sanctuaire d’Apollon à Delphes est aujourd’hui un des sites les plus visités du pays.
-					Les Météores, ces impressionnants pitons rocheux couronnés de monastères, impressionnent également, et pas seulement les passionnés d’escalade. Enfin, la péninsule du Pélion, terre mythique de Jason et des Argonautes, est sillonnée de chemins pluriséculaires reliant de ravissants hameaux, avec des criques et des plages qui n’ont rien à envier à celles des îles !
-					Le centre de la Grèce réserve aussi d’autres surprises, comme les vallées et les prairies alpines du Pinde, un massif montagneux de l’Épire, où skier l’hiver et où trouver la fraîcheur en été.
-					À cela s’ajoutent les plaisirs de la table et, surtout, la gentillesse et le sens de l’hospitalité des habitants.
-					</p>
-					
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<span class="details"> AinsiParlaitZarathoustra © Flickr </span>
-
-				</div> <!-- bkgarticleimagex -->
 		</article>
 			<aside id="zanteax">
 				<div>
 					<hr>
-					<h3>
-						Plus sur la grèce
-					</h3>
+					<h1>
+						Infos Pratiques
+					</h1>
 					<hr>					
-					<a href="#articlexathene" name="athene" target="_top">
-						<p>Athène	
-							<img src="../pics/athens.webp" alt="athenspicsside" id="athenspicside">
-							<br>Avec grâce, Athène c'est un mix d'histoire et du 'contemporary cool'
-								&#160;&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
+						<h2>Formalités d'entrée</h2>
+
+						<p>
+							Aucun visa pour les ressortissants européens et les Suisses. Pas de visa pour les Canadiens séjournant au plus trois mois.
 						</p>
-					</a>
+
 					<hr>
-					<a href="voyage/voyage1.html" name="crete" target="_top">
-						<p>Crète	
-							<img src="../pics/crete1.jpg" alt="cretepicsside" id="cretepicside">
-							<br>Crète, ses plage, ses paysage et ses trèsor
-								&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
+						<h2>Langue</h2>
+
+						<p>
+							Grec
 						</p>
-					</a>
+					
 					<hr>
-					<a href="voyage/voyage1.html" name="zante" target="_top">
-						<p>Zante	
-							<img src="../pics/zante1.webp" alt="cretepicsside" id="zantepicside">
-							<br>Zante, la capitale de Zakynthos
-								&#160;&#160;&#160;  〉         <!-- ⇥ ﹀ 〉 --> 
+						<h2>Décalage horaire</h2>
+							
+						<p>
+							GMT/UTC + 2h en hiver (+ 3h en été).
 						</p>
-					</a>
+					
+					<hr>
+						<h2>Adresses et numéros utiles</h2>
+							
+						<p>
+							Ambassade à l'étranger:<br><br>
+							Léoforos Vassilissis Sofias 7, 10671 Athènes – tél. +30 (2)10 339 1000 ; fax. +30 (2)10 339 1009 ; www.ambafrance-gr.org<br><br>
+ 
+ 
+							Ambassade en France:<br><br>
+							17, rue Auguste-Vacquerie, 75116 Paris – tél. +33 (0)1 47 23 72 28 ; fax. +33 (0)1 47 23 73 85 ; www.amb-grece.fr
+						</p>
+					
 					<hr>
 				</div>
 			</aside>
-	</section>
+	</section>   <!-- articlewrapperdivzante  -->
+		<div id="bkgarticleimagexzante2">
+					<p>
+					Bien que ce ne soit pas le meilleur choix pour séjourner sur l’île, la capitale vaut vraiment le détour. Si vous arrivez sur l’île par un ferry, n’ayez pas peur de passer une nuit ou deux ici, car il y a assez de choses à faire pour vous occuper pendant un jour ou deux.
+
+					Que vous ayez un hôtel et que vous séjourniez dans la ville de Zante, ou que vous vous arrêtiez simplement pour une excursion d’une journée autour de l’île, la ville de Zante devrait certainement figurer sur votre itinéraire à Zakynthos.
+					</p>
+					
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<span class="details"> © welcome to Zante </span>
+
+		</div>    <!-- bkgarticleimagex parallax effect comme fin article zante -->
 </main>
 <footer>
 	footer

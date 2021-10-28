@@ -5,80 +5,128 @@ If you want to style that <div> when the contained input has focus,
 you can do it like so:
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&display=swap');   /* css rule:  font-family: 'Delius Unicase', cursive; */  
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');   /* css rule:  font-family: 'Rubik Mono One', sans-serif; */
 
 :root {
-	--fontlogo:'Delius Unicase', cursive;
-	--fonttitle: ;
+	--fontgen:'Zen Maru Gothic', sans-serif;
+	--fontlogo: 'Rubik Mono One', sans-serif;
+	--fontgrece:'GFS Didot', serif;
+	--fontsizetitle: 3em;
+	--fontsizesubtitle: 1.5em;
+	--fontsizesubtitle2: 2em;
+	--fontsizegeneral: 1.2em;
+	--fontsizegeneralmed: 1em;
+	--fontsizedetails: 0.8em;
+	--colorscreen: rgba(40, 65, 119, 0.9);
+	--colorscreenblack: rgba(0, 0, 0, 0.7);
+	--colorscreenwhite: rgba(255, 255, 255, 0.6);
+	--bluedeep: #284177;
+	--blue: #006BBD;
+	--azur: #83CEEC;
+	--azurlight: #DCF1F9;
+	--beige: #EDE8E4;
+	--deepbeige: #C2AFA8;
+	--white: #ffffff;
+	--black: #000000;
+	--textshad1: 2px 4px 4px rgba(0,0,0,0.2),
+                 0px -5px 10px rgba(255,255,255,0.15);
+    --generalshad:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-
-body {
-	padding: 0px;
-    margin: 0px;
-	font-size: 16px;
-}
-
-a {
-	text-decoration: none;
-	color: whitesmoke;
-
-}
 
 header {
-	background-color: green ;
+	background-color: var(----colorscreenblack) ;
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+}
+
+.navbar1 {
+	background-color: var(--black);
+	padding:0.5vh ;
 	display: flex;
-	justify-content:center;
-	align-items: center;
-	height: 20vh;
-}
-
-nav {
-	width: 100%;
-	background-color: blue;
-	display: flex;
-	justify-content: space-around;
-	height: 15vh;
-}
-
-#headerlogo {
-	font-family: 'Delius Unicase', cursive;
-	color: whitesmoke;
-	font-size: 2.5em;
-
+	justify-content: space-evenly;
 }
 
 
-.menu1 {
-	background-color: red;
+.menulist, .menulist2 {
+	background-color: var(--black);
+	margin-right: 30vh;
+
+}
+
+.continentsx {
 	display: none;
-	position: absolute;
+	background-color: var(--black);
+}
+
+.paysx {
+	display: none;
+	background-color: var(--black);
+}
+
+.personnesx {
+	display: none;
+	background-color: var(--black);
+
+}
+
+[class^="villes"] {
+	display: none;
+	background-color: var(--black);
 }
 
 
-.menu2 {
-	background-color: red;
-	display:none;
-	position: absolute;
-
+.menulist:hover .continentsx {
+	  	background-color: var(--blue);
+	 	margin-left: 5vh;
+		display:block;
+	 	color: var(--white);
+	 	border: solid 1px white;
 }
 
-.flexmenu {
-	display: flex;
-	flex-direction: column ;
+.continentsx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	color: var(--white);
+ 	position: relative;
+ 	border: solid 1px white;
+ }
+
+.paysx:hover [class^="villes"] {
+  	background-color: var(--blue);
+	color: var(--white);
+ 	display: block;
+ 	padding: 1vh;
+	margin-left: 5vh;
+	border: solid 1px white;
+ 	position: absolute;
+ 	white-space: nowrap;
+ }
+
+.menulist2:hover .personnesx {
+	  	background-color: var(--blue);
+	  	display:block;
+	 	margin-left: 5vh;
+	 	color: var(--white);
+	 	border: solid 1px white;
 }
 
+.personnesx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	color: var(--white);
+ 	border: solid 1px white;
+ 	 position: absolute;
+ }
 
-.menulabel:hover .menu1 {
-	background-color: rebeccapurple;
-	display: block;
-	position: relative;
-	z-index: 2;
+[class^="villes"] a:hover {
+	border: solid 1px white;
 }
 
-.menulabel2:hover .menu2 {
-	background-color: rebeccapurple;
-	display: block;
-	position: relative;
-	z-index: 2;
+[class^="villes"] a {
+		white-space: nowrap;
+			display: flex;
+	flex-direction: column;
 }
+
