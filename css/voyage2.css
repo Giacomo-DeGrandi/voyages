@@ -29,11 +29,7 @@ nav {
     width: 50%;
     box-shadow: 0 15px 50px;
     margin-left: 20px;
-    transition: .5s;
-    animation: slidedown 10s;
 }
-
-  
 
 .main aside img:hover {
     margin-top: 3%;
@@ -60,8 +56,6 @@ nav {
     width: 50%;
     box-shadow: 0 15px 50px;
     float: right;
-    transition: .5s;
-    animation: slidedown 10s;
 }
 
 .main-night aside img:hover {
