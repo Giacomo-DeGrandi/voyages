@@ -5,10 +5,11 @@ If you want to style that <div> when the contained input has focus,
 you can do it like so:
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');   /* css rule:  font-family: 'Rubik Mono One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Rubik+Mono+One&family=Rubik:wght@300;400;500&display=swap');
+   /* css rule:  font-family: 'Rubik Mono One', sans-serif; */
 
 :root {
-	--fontgen:'Zen Maru Gothic', sans-serif;
+	--fontgen:'Rubik', sans-serif;
 	--fontlogo: 'Rubik Mono One', sans-serif;
 	--fontgrece:'GFS Didot', serif;
 	--fontsizetitle: 3em;
@@ -30,30 +31,56 @@ you can do it like so:
 	--black: #000000;
 	--textshad1: 2px 4px 4px rgba(0,0,0,0.2),
                  0px -5px 10px rgba(255,255,255,0.15);
-    --generalshad:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    --generalshad: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+* {
+	text-align: justify;
 }
 
 
-header {
-	background-color: var(----colorscreenblack) ;
-	font-family: var(--fontlogo);
-	font-size: var(--fontsizegeneral);
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
 	color: var(--white);
 }
 
 .navbar1 {
+	top: 0;
+	position: sticky;
 	background-color: var(--black);
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
 	padding:0.5vh ;
 	display: flex;
 	justify-content: space-evenly;
+	z-index: 999;
+}
+
+#logo {
+	position: relative;
+	right: 10vh;
 }
 
 
-.menulist, .menulist2 {
+.menulist {
+	left: 30vh;
+	position: absolute;
+}
+
+.menulist2 {
 	background-color: var(--black);
-	margin-right: 30vh;
-
+	right: 50vh;
+	position: absolute;
+	box-shadow: var(--generalshad);
 }
+
 
 .continentsx {
 	display: none;
@@ -79,17 +106,18 @@ header {
 
 .menulist:hover .continentsx {
 	  	background-color: var(--blue);
-	 	margin-left: 5vh;
+	  	padding: 2vh;
 		display:block;
 	 	color: var(--white);
 	 	border: solid 1px white;
+
 }
 
 .continentsx:hover .paysx {
 	background-color: var(--blue);
  	display:inline-block;
+ 	 	padding: 1vh;
  	color: var(--white);
- 	position: relative;
  	border: solid 1px white;
  }
 
@@ -98,16 +126,14 @@ header {
 	color: var(--white);
  	display: block;
  	padding: 1vh;
-	margin-left: 5vh;
 	border: solid 1px white;
- 	position: absolute;
  	white-space: nowrap;
+ 	position: absolute;
  }
 
 .menulist2:hover .personnesx {
 	  	background-color: var(--blue);
 	  	display:block;
-	 	margin-left: 5vh;
 	 	color: var(--white);
 	 	border: solid 1px white;
 }
@@ -117,12 +143,26 @@ header {
  	display:inline-block;
  	color: var(--white);
  	border: solid 1px white;
- 	 position: absolute;
  }
 
 [class^="villes"] a:hover {
 	border: solid 1px white;
+
 }
+
+[class^="pays"] a {
+			white-space: nowrap;
+			display: flex;
+	flex-direction: column;
+
+}
+
+
+[class^="pays"] a:hover {
+	border: solid 1px white;
+
+}
+
 
 [class^="villes"] a {
 		white-space: nowrap;
@@ -130,3 +170,210 @@ header {
 	flex-direction: column;
 }
 
+
+/* Main Common */
+
+.maincommon {
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+}
+
+.maincommon p {
+	  	background-color: var(--black);
+	 	border: solid 1px white;
+	 	padding: 1vh;
+}
+
+.commonpicswrapper {
+	display: flex;
+}
+
+[class^="bkgmainpiccommon"] {
+	width: 68vh;
+	height: 110vh;
+	display: flex;
+	justify-content: safe center;
+	align-items: center;
+}
+
+[class^="bkgmainpiccommon"] h1 {
+	display: none;
+}
+
+[class^="bkgmainpiccommon"] p {
+	position: absolute;
+}
+
+[class^="bkgmainpiccommon"]:hover h1 {
+	display: block;
+	position: relative;
+	top: 10vh;
+}
+
+[class^="bkgmainpiccommon"] a {
+	background-color: var(--blue);
+	border: solid 1px var(--white);
+	padding: 1vh;
+}
+
+.bkgmainpiccommon {
+	background-image: url("../pics/common/liberty.jpg");
+	background-attachment: fixed;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+.bkgmainpiccommon1 {
+	background-image: url("../pics/common/indo.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 2vh ;
+}
+
+.bkgmainpiccommon2 {
+	background-image: url("../pics/common/grece8.jpg");
+	background-attachment: fixed;
+	background-position: 75vh 0.2vh;
+	background-repeat: no-repeat;
+}
+
+
+/* spans */
+
+.detailscommon {
+	position: relative ;
+	bottom: 30vh;
+	left: 2vh;
+}
+
+.detailscommon:hover {
+	border: solid 1px var(--white);
+}
+
+	/* section */
+
+.commonintro {
+	color: var(--black);
+}
+
+/* card */
+
+.wrappercardintro {
+	padding: 2vh;
+	display: flex;
+	justify-content: space-between;
+	text-align: justify;
+}
+
+.wrappercardintro a {
+	color: black;
+}
+
+.introcommoncard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logogit {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.introcommoncardimgcont {
+	height: 30vh;
+	border: solid 1px black;
+}
+
+.introtextcard {
+	 font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+
+}
+
+.placesnames {
+	color: var(--white) !important;
+	background-color: var(--blue);
+	border: solid 1px black;
+	padding: 1vh;
+}
+
+
+ /*media queries*/
+
+
+/*  footer  */
+
+footer {
+ 	background-color: black;
+ 	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+	height: 50vh;
+ }
+
+ footer ul {
+	list-style-type: none;
+}
+
+ footer hr {
+	color: var(--white);
+}
+
+.wrapfooter {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+															/* .wrapfooter > div > span {
+																	 	font-family: var(--fontlogo);
+															} */
+
+.logodetails {
+	float: right;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizedetails);
+	padding: 2vh;
+	font-style: italic;
+	margin-top: 7vh;
+	margin-left: 7vh;
+
+}
+
+#copydetails {
+	float: right;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizedetails);
+	padding: 2vh;
+}
+
+#logofooter {
+		font-family: var(--fontlogo);	
+		position: relative;
+		top: 8vh;
+		font-size: var(--fontsizesubtitle);
+		left: 3vh;
+}
+
+footer li:hover {
+	border: solid 1px var(--white);
+}
+
+/* logo pics */
+
+.logospics {
+	padding: 2vh;
+	width: 6vh;
+	position: relative;
+	top: 10vh;
+	left: 8vh;
+}
+
+.logospics2 {
+	padding: 2vh;
+	width: 6vh;
+	position: relative;
+}

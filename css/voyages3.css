@@ -6,13 +6,15 @@ you can do it like so:
 */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase&family=GFS+Didot&family=Zen+Maru+Gothic&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Rubik+Mono+One&family=Rubik:wght@300;400;500&display=swap');
+
  /* css rule:  font-family: 'GFS Didot', serif; */  
- /* css rule:  font-family: 'Delius Unicase', cursive; */ 
- /* css rule:  font-family: 'Zen Maru Gothic', sans-serif; */   
+ /* css rule: font-family: 'Rubik', sans-serif; */ 
+ /* css rule:  font-family: 'Zen Maru Gothic', sans-serif;  */   
 
 :root {
-	--fontgen:'Zen Maru Gothic', sans-serif;
+	--fontgen:'Rubik', sans-serif;
 	--fontlogo: 'Rubik Mono One', sans-serif;
 	--fontgrece:'GFS Didot', serif;
 	--fontsizetitle: 3em;
@@ -36,17 +38,16 @@ you can do it like so:
     --generalshad:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
+/* @media only screen and (min-width: 1200px) { }  */	
 
 a {
 	text-decoration: none;
 	color: var(--white);
 }
 
+* {
+	text-align: justify;
+}
 
 /* personal main grece */
 
@@ -126,6 +127,14 @@ a {
 	font-size: var(--fontsizedetails);
 }
 
+.detailscard {												/* details */
+	color: var(--white);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+	font-family: var(--fontgen);
+	background-color: var(--azur);
+}
+
 .picstitles {
 	color: var(--black);
 	text-shadow: var(--textshad);
@@ -162,7 +171,10 @@ a {
 }
 
 #bkgarticleimagex {
-		background-image: url("../pics/athene/athenearticle3.jpg") ;   /* Exarchia */
+		background-image: url("../pics/athene/athenearticle3.jpg") ; 
+		display: flex ;
+		flex-direction: column; 
+		align-items: center; /* Exarchia */
 }
 
 #bkgarticleimagexzante {														/* Zante */
@@ -185,7 +197,7 @@ a {
 		color: var(--white);
 }
 
-[id^="bkgarticleimage"] h1 {
+[id^="bkgarticleimage"] h3 {
 		font-family: var(--fontgen);
 		font-size: var(--fontsizetitle);
 		color: var(--white);
@@ -225,7 +237,7 @@ a {
 }
 
 
-[id^="articlex"] h1 {
+[id^="articlex"] h3 {
 	font-family: var(--fontgen);
 	font-size: var(--fontsizesubtitle2);
 	background-color: var(--azur);
@@ -233,7 +245,7 @@ a {
 
 }	
 
-[id^="articlex"] h1:hover {
+[id^="articlex"] h3:hover {
     transition: 1s;
 	color:var(--bluedeep) ;
 }
@@ -257,6 +269,10 @@ a {
 
 [id^="articlex"] img:hover {
 		box-shadow: var(--generalshad);
+}
+
+#articlexathene {
+	width: 110vh;
 }
 
 /* buger le text et images dans les article */
@@ -303,7 +319,7 @@ a {
 		width: 50vh;
 }
 
-[id$="ax"] h1{
+[id$="ax"] h3{
 	font-family: var(--fontgrece);
 	font-size: var(--fontsizesubtitle);
 	color: var(--black);
@@ -338,6 +354,11 @@ a {
 #atheneax {
 	float: left;
 }
+
+#acidathenediv {
+	width: 40vh;
+}
+
 
 /* cards */
 
@@ -379,16 +400,16 @@ a {
 }
 
 .bkgcards a span {
-	font-family: var(--fontgrece);
-	color: var(--black);
-	background-color: var(--white);
+	font-family: var(--fontgen);
+	color: var(--white);
+	background-color: var(--azur);
 	padding: 2vh;
 	border: solid  0.1vh var(--azur);
 	box-shadow: var(--generalshad);
 }
 
 .bkgcards a span:hover {
-	font-family: var(--fontgrece);
+	font-family: var(--fontgen);
 	color: var(--white);
 	background-color: var(--bluedeep);
 	padding: 2vh;
@@ -511,3 +532,6 @@ a {
 	z-index: 3;
 }
 
+#grecefooter {
+	height: 50vh;
+}
