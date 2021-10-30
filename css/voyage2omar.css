@@ -1,0 +1,418 @@
+:root {
+	--fontgen:'Rubik', sans-serif;
+	--fontlogo: 'Rubik Mono One', sans-serif;
+	--fontgrece:'GFS Didot', serif;
+	--fontsizetitle: 3em;
+	--fontsizesubtitle: 1.5em;
+	--fontsizesubtitle2: 2em;
+	--fontsizegeneral: 1.2em;
+	--fontsizegeneralmed: 1em;
+	--fontsizedetails: 0.8em;
+	--colorscreen: rgba(40, 65, 119, 0.9);
+	--colorscreenblack: rgba(0, 0, 0, 0.7);
+	--colorscreenwhite: rgba(255, 255, 255, 0.6);
+	--bluedeep: #284177;
+	--blue: #006BBD;
+	--azur: #83CEEC;
+	--azurlight: #DCF1F9;
+	--beige: #EDE8E4;
+	--deepbeige: #C2AFA8;
+	--white: #ffffff;
+	--black: #000000;
+	--textshad1: 2px 4px 4px rgba(0,0,0,0.2),
+                 0px -5px 10px rgba(255,255,255,0.15);
+    --generalshad: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+header {
+    background-image: url("../images/statue-de-la-liberté.jpg");
+    height: 500px;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.navbar1 {
+	top: 0;
+	background-color: var(--black);
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneral);
+	color: white;
+	padding:0.25vh ;
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 999;
+    height: 100px;
+}
+
+#logo {
+	position: relative;
+	right: 10vh;
+}
+
+
+.menulist {
+	left: 30vh;
+	position: absolute;
+}
+
+.menulist2 {
+	background-color: var(--black);
+	right: 50vh;
+	position: absolute;
+	box-shadow: var(--generalshad);
+}
+
+
+.continentsx {
+	display: none;
+	background-color: var(--black);
+}
+
+.paysx {
+	display: none;
+	background-color:var(--black);
+}
+
+.personnesx {
+	display: none;
+	background-color:var(--black);
+
+}
+
+[class^="villes"] {
+	display: none;
+	background-color: var(--black);
+}
+
+
+.menulist:hover .continentsx {
+	  	background-color: var(--blue);
+	  	padding: 2vh;
+		display:block;
+	 	color: var(--white);
+	 	border: solid 1px white;
+
+}
+
+.continentsx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	 	padding: 4.26px;
+ 	color: var(--white);
+ 	border: solid 1px white;
+ }
+
+.paysx:hover [class^="villes"] {
+  	background-color: var(--blue);
+	color: var(--white);
+ 	display: block;
+ 	padding: 1vh;
+	border: solid 1px white;
+ 	white-space: nowrap;
+ 	position: absolute;
+ }
+
+.menulist2:hover .personnesx {
+	  	background-color: var(--blue);
+	  	display:block;
+	 	color: var(--white);
+	 	border: solid 1px white;
+}
+
+.personnesx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	color: var(--white);
+ 	border: solid 1px white;
+ }
+
+[class^="villes"] a:hover {
+	border: solid 1px white;
+
+}
+
+[class^="pays"] a {
+			white-space: nowrap;
+			display: flex;
+	flex-direction: column;
+
+}
+
+
+[class^="pays"] a:hover {
+	border: solid 1px white;
+
+}
+
+
+[class^="villes"] a {
+		white-space: nowrap;
+			display: flex;
+	flex-direction: column;
+}
+
+.main h1 {
+    font-size: 40px;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.main aside img {
+    margin-top: 3%;
+    float: right;
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    margin-left: 20px;
+}
+
+.main aside img:hover {
+    margin-top: 3%;
+    float: right;
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    margin-left: 20px;
+    transform: scale(1.1);
+}
+
+.main article {
+    margin-top: 3%;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.main-night h1 {
+    font-size: 40px;
+    margin-top: 3%;
+    margin-left: 20px;
+}
+
+.main-night aside img {
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    float: right;
+}
+
+.main-night aside img:hover {
+    width: 50%;
+    box-shadow: 0 15px 50px;
+    float: right;
+    transform: scale(1.1);
+}
+
+.main-night article {
+    margin-top: 3%;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.main-night article img {
+    width: 45%;
+    margin-top: 1%;
+}
+
+.main-visite h1 {
+    font-size: 40px;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-visite h2 {
+    margin-top: 3%;
+    margin-left: 10px;
+}
+
+.main-visite img {
+    margin-top: 1%;
+    width: 500px;
+    height: 300px;
+    margin-left: 10px;
+}
+
+@keyframes slidedown {
+    form {
+        transform:translateY(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main-visite article {
+    margin-left: 10px;
+    width: 50%;
+}
+
+.main-visite aside h3 {
+    float: right;
+}
+
+.main-cards {
+    margin: 20px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+}
+
+.cards .card {
+    margin-right: 20px;
+    box-shadow: 0 0px 50px;
+}
+
+.cards .card img {
+    width: 500px;
+    height: 300px;
+    display: flex;
+}
+
+.cards .card .card-header{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.cards .card .card-header .title {
+    font-size: 20px;
+    margin-top: 3%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.button {
+    padding-left: 90px;
+}
+
+button {
+    margin-left: 5em;
+}
+
+footer {
+    background-color: black;
+    font-family: var(--fontgen);
+   font-size: var(--fontsizegeneral);
+   color: var(--white);
+   height: 50vh;
+}
+
+footer ul {
+   list-style-type: none;
+}
+
+footer hr {
+   color: var(--white);
+}
+
+.wrapfooter {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+                                                           /* .wrapfooter > div > span {
+                                                                        font-family: var(--fontlogo);
+                                                           } */
+
+.logodetails {
+   float: right;
+   font-family: var(--fontgen);
+   font-size: var(--fontsizedetails);
+   padding: 2vh;
+   font-style: italic;
+   margin-top: 7vh;
+   margin-left: 7vh;
+
+}
+
+#copydetails {
+   float: right;
+   font-family: var(--fontgen);
+   font-size: var(--fontsizedetails);
+   padding: 2vh;
+}
+
+#logofooter {
+       font-family: var(--fontlogo);	
+       position: relative;
+       top: 8vh;
+       font-size: var(--fontsizesubtitle);
+       left: 3vh;
+}
+
+footer li:hover {
+   border: solid 1px var(--white);
+}
+
+/* logo pics */
+
+.logospics {
+   padding: 2vh;
+   width: 6vh;
+   position: relative;
+   top: 10vh;
+   left: 8vh;
+}
+
+.logospics2 {
+   padding: 2vh;
+   width: 6vh;
+   position: relative;
+}
+

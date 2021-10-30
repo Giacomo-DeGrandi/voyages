@@ -1,0 +1,1093 @@
+/*  If you have not heard about that before, it represents an element that has received focus 
+or contains an element that has received focus. So, for example, you have a <div> and inside 
+of it is an input element. 
+If you want to style that <div> when the contained input has focus, 
+you can do it like so:
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Rubik+Mono+One&family=Rubik:wght@300;400;500&display=swap');
+
+ /* css rule:  font-family: 'GFS Didot', serif; */  
+ /* css rule: font-family: 'Rubik', sans-serif; */ 
+ /* css rule:  font-family: 'Zen Maru Gothic', sans-serif;  */   
+
+:root {
+	--fontgen:'Rubik', sans-serif;
+	--fontlogo: 'Rubik Mono One', sans-serif;
+	--fontgrece:'GFS Didot', serif;
+	--fontsizetitle: 3em;
+	--fontsizesubtitle: 1.5em;
+	--fontsizesubtitle2: 2em;
+	--fontsizegeneral: 1.2em;
+	--fontsizegeneralmed: 1em;
+	--fontsizedetails: 0.8em;
+	--colorscreen: rgba(40, 65, 119, 0.9);
+	--colorscreenblack: rgba(0, 0, 0, 0.7);
+	--bluedeep: #284177;
+	--blue: #006BBD;
+	--azur: #83CEEC;
+	--azurlight: #DCF1F9;
+	--beige: #EDE8E4;
+	--deepbeige: #C2AFA8;
+	--white: #ffffff;
+	--black: #000000;
+	--textshad1: 2px 4px 4px rgba(0,0,0,0.2),
+                 0px -5px 10px rgba(255,255,255,0.15);
+    --generalshad:rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+/* @media only screen and (min-width: 1200px) { }  */	
+
+@media only screen and (min-width: 600px) {
+
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+* {
+	text-align: justify;
+}
+
+/* personal main grece */
+
+#maingrece h5 {
+	font-size: var(--fontsizesubtitle);
+	background-color: var(--bluedeep);
+	font-family: var(--fontgen);
+	color: var(--white);
+	padding: 2vh;
+
+}
+
+.mainpicgrece {
+	background-image: url("../pics/grecemain.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.titlesonpic {
+		display: flex;
+		justify-content: safe flex-end;
+		-webkit-animation: fadein 6s; /* Safari, Chrome and Opera > 12.1 */      
+        -moz-animation: fadein 6s; /* Firefox < 16 */
+        -ms-animation: fadein 6s; /* Internet Explorer */
+         -o-animation: fadein 6s; /* Opera < 12.1 */
+            animation: fadein 6s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+.titlesonpic h1 {
+
+		background-color: rgba(0, 0, 0, .3) ;
+		padding: 10vh;
+		font-weight: 400;
+		font-size: var(--fontsizetitle);
+		font-family: var(--fontgrece);
+		color: var(--white);
+		text-shadow: var(--textshad);
+}
+
+.linksonpics {
+		background-color: rgba(0, 0, 0, .3) ;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 3vh;
+		font-family: var(--fontgen);
+		font-size: var(--fontsizesubtitle2);
+}
+
+.linksonpics a {
+	padding: 4vh;
+
+
+}
+
+.linksonpics a:hover {
+		background-color: rgba(0, 0, 0, .3);
+		padding: 4vh;
+		transition: 0.2s;
+
+}
+
+.details {												/* details */
+	color: var(--azur);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+}
+
+
+.detailscard {												/* details */
+	color: var(--white);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+	font-family: var(--fontgen);
+	background-color: var(--azur);
+}
+
+.picstitles {
+	color: var(--black);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizesubtitle);
+}
+
+/* articles */
+
+[class^="articlewrapperdiv"] {			/* ce trick m'aide pas mal pour les truc ripetitifs ( en fait quand je l'ai decouvert ç' etait un'epiphanie! ) */
+	display: flex;
+}
+
+.articlewrapperdivathene {
+	display: flex;
+	flex-direction: column;
+}
+
+.articlewrapperdivcrete {
+	margin-top: 10vh;
+}
+
+.asideleft {
+	display: flex;
+}
+
+[id^="bkgarticleimage"] {
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: var(--colorscreen);
+	background-blend-mode: screen, darken;                                  /* styling background-image */
+	height: 80vh;
+}
+
+#bkgarticleimagex {
+		background-image: url("../pics/athene/athenearticle3.jpg") ; 
+		display: flex ;
+		flex-direction: column; 
+		align-items: center; /* Exarchia */
+}
+
+#bkgarticleimagexzante {														/* Zante */
+		background-image: url("../pics/zante/zante1.jpg") ;
+		background-attachment: local;
+}
+
+#bkgarticleimagexzante2 {														/* Zante fin */
+		background-image: url("../pics/zante/zante4.webp") ;
+		background-attachment: fixed;
+}
+
+#bkgarticleimagexgrece {														/* grece */
+		background-image: url("../pics/mainpic3.jpg") ;
+		width: 100%;
+}
+
+
+[id^="bkgarticleimage"] span {
+		color: var(--white);
+}
+
+[id^="bkgarticleimage"] h3 {
+		font-family: var(--fontgen);
+		font-size: var(--fontsizetitle);
+		color: var(--white);
+		background-color: var(--colorscreenblack);
+		padding: 3vh;
+}
+
+[id^="bkgarticleimage"] p, [id^="bkgarticleimage"] h2 {
+	padding: 8vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+	width: 150vh;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+[id^="articlex"] p {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+											/*je l'ai copié mais bon, je suis
+											 sur qui va marcher sur plein des browsers (est-ce que 
+											 je douvrais ajouter les keyframes express pour les 
+											 browser?) */
+
+	will-change: scroll-position fadein opacity;
+	    							
+	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}	
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+[id^="articlex"] h3 {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizesubtitle2);
+	background-color: var(--azur);
+	color: var(--white);
+
+}	
+
+[id^="articlex"] h3:hover {
+    transition: 1s;
+	color:var(--bluedeep) ;
+}
+
+[id^="articlex"] h2 {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+}	
+
+
+[id^="articlex"] {
+	padding: 10vh;
+	display: flex;
+	flex-direction: column;
+}
+
+[id^="articlex"] img {
+	width: 90vh;
+	margin-top: 10vh;
+}
+
+[id^="articlex"] img:hover {
+		box-shadow: var(--generalshad);
+}
+
+#articlexathene {
+	width: 110vh;
+}
+
+
+/* buger le text et images dans les article */
+
+
+[class$="imgflex"] {
+	display: flex;
+}
+
+[class$="imgflex"] p {
+	padding: 5vh;
+}
+
+[id$="xsub"] {
+	padding: 2vh;
+}
+
+/* oveflowgallery modules */
+
+.oveflowgallery {
+	display: flex;
+	overflow-x: scroll;
+	width: 180vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-image: url("../pics/crete/crete6.jpg");
+	object-fit: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-blend-mode: darken, screen;
+
+}
+
+.galleryflexdetails {
+	display: flex;
+	flex-direction: column;
+	object-fit: cover;
+	padding: 2vh;
+}
+
+/* asides   -ax  */
+
+
+[id$="ax"]  h3 {     
+	padding: 2vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizesubtitle);
+	color: var(--black);
+	animation-duration: 4s;
+   animation-name: slideinleft;
+   animation-iteration-count: 1;
+}
+
+[id$="ax"]  h2 {     
+	padding: 2vh;
+	font-family: var(--fontgrece);
+	font-size: var(--fontsizegeneral);
+	color: var(--black);
+}
+
+
+[id$="ax"]  p {     
+	padding: 2vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--black);
+}
+
+[id$="ax"]{
+	padding: 4vh;
+}
+
+[id$="ax"]  img {     
+	width: 50vh;
+}
+
+#atheneax {
+	float: left;
+}
+
+#acidathenediv {
+	width: 40vh;
+}
+
+
+@keyframes slideinleft {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+}
+
+
+/* cards */
+
+.cardsection {
+	padding: 10vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.cardsection h2 {
+	padding: 2vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneralmed);
+	background-color: var(--white);
+	color: var(--black);
+	text-shadow: var(--textshad);
+	box-shadow: var(--generalshad);
+}
+
+.bkgcards h1 {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 2vh;
+	width: 90vh;
+}
+
+.bkgcards tr td {
+	padding: 5vh;
+}
+
+.bkgcards tr td:hover {
+	background-color: var(--azurlight) ;
+}
+ 
+.bkgcards a {
+	color: black;
+}
+
+.bkgcards a span {
+	font-family: var(--fontgen);
+	color: var(--white);
+	background-color: var(--azur);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+	box-shadow: var(--generalshad);
+}
+
+.bkgcards a span:hover {
+	font-family: var(--fontgen);
+	color: var(--white);
+	background-color: var(--bluedeep);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+	transition: 0.2s;
+	box-shadow: var(--generalshad);
+}
+
+[id^="wrapmodal"] {	
+	display: none;
+}
+
+																				/*  ici [id^="wrapmodal"]:target ne marche pas, je ne suis pas sur mais
+																					je crois que c'est liée au fait que il y à deja des id 'wrapmodalform'
+																					donc je douvrais au moins ajouter une 'x' (ea wrapmodal-x-num ). 
+																					J'aurais voulu trouver une fonction pour le faire sans besoin de
+																					devoir tout changer et j'ai recherché sur les pseudo-elements ::before
+																					::after avec l'utilisation de 'content mais ils sont pas destiné a 
+																					l ajout de un partie interne au css.
+
+																				*/
+																	
+#wrapmodal:target, #wrapmodal2:target, #wrapmodal3:target, #wrapmodal4:target,
+#wrapmodal5:target, #wrapmodal6:target {
+	width: 100%;
+	display: block;
+	background-color: var(--beige);
+	color: var(--white);
+}
+
+
+.cardimgcrop {
+	width: 45vh;
+	height: 30vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.cardimgcrop img {
+	width: 55vh;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--beige);
+	padding: 0vh;
+	border-radius: 2vh;
+	box-shadow: var(--generalshad);
+
+}
+
+/* modalcards */
+
+#setdate #setdate1 #setdate2 #setdate3 #setdate4 #setdate5  {
+	font-family: var(--fontgen);
+}
+
+[id^="setdatex"]  {						
+	font-family: var(--fontgen);
+}
+
+[id^="numpeople"] {
+	border: 0px;
+	font-family: var(--fontgen);
+	background-color: var(--bluedeep);
+	color: var(--white);
+	border-radius: 2vh;
+}
+
+.clsbtn {
+	background-color: var(--bluedeep);
+	color: var(--white);
+}
+
+.modalexpe {
+	font-family: var(--fontgen);
+	padding: 15vh;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.modalexpe span {
+	font-size: var(--fontsizedetails);
+
+}
+
+[id^="reservebtn"] {
+	color:  var(--white);
+	background-color: var(--bluedeep);
+	border-radius: 2vh;
+	margin-left: 4vh;
+	cursor: pointer;
+}
+
+
+#reserve1, #reserve2, #reserve3, #reserve4, #reserve5, #reserve6 {
+	display: none;
+	font-size: var(--fontsizegeneral);
+}
+
+[id^="reserve"]:checked   
+~ [id^="reserveform"]
+						{
+	display: none;
+}
+
+[id^="reserveform"] {	
+	display: block;
+	color: var(--white);
+	background-color: var(--bluedeep);
+	z-index: 3;
+}
+
+[id^="reserveform"] form {
+	display: block;
+	color: var(--white);
+	background-color: var(--bluedeep);
+	z-index: 3;
+}
+
+#grecefooter {
+	height: 50vh;
+}
+
+}  															/* media queries screen 1200  */
+
+@media only screen and (max-width: 600px) {																/* media queries screen 600  */
+
+body {
+
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+* {
+	text-align: justify;
+}
+
+/* personal main grece */
+
+#maingrece h5 {
+	font-size: var(--fontsizesubtitle);
+	background-color: var(--bluedeep);
+	font-family: var(--fontgen);
+	color: var(--white);
+	padding: 2vh;
+
+}
+
+.mainpicgrece {
+	background-image: url("../pics/grecemain.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.titlesonpic {
+		display: flex;
+		justify-content: safe flex-end;
+
+		
+		-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+.titlesonpic h1 {
+
+		background-color: rgba(0, 0, 0, .3) ;
+		padding: 10vh;
+		font-weight: 400;
+		font-size: var(--fontsizetitle);
+		font-family: var(--fontgrece);
+		color: var(--white);
+		text-shadow: var(--textshad);
+}
+
+.linksonpics {
+		background-color: rgba(0, 0, 0, .3) ;
+		max-width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 3vh;
+		font-family: var(--fontgen);
+		font-size: var(--fontsizesubtitle2);
+}
+
+.linksonpics a {
+	padding: 4vh;
+
+
+}
+
+.linksonpics a:hover {
+		background-color: rgba(0, 0, 0, .3);
+		padding: 4vh;
+		transition: 0.2s;
+
+}
+
+.details {												/* details queries */
+	color: var(--azur);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+}
+
+#detailszante {												/* zante details queries */
+	color: var(--azur);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+	position: relative;
+	bottom: 30vh;
+}
+
+.detailscard {												/* details queries*/
+	color: var(--white);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizedetails);
+	font-family: var(--fontgen);
+	background-color: var(--azur);
+}
+
+.picstitles {
+	color: var(--black);
+	text-shadow: var(--textshad);
+	font-size: var(--fontsizesubtitle);
+}
+
+/* articles */
+
+[class^="articlewrapperdiv"] {			/* ce trick m'aide pas mal pour les truc ripetitifs ( en fait quand je l'ai decouvert ç' etait un'epiphanie! ) */
+	display: flex;
+}
+
+.articlewrapperdivathene {
+	display: flex;
+	flex-direction: column;
+}
+
+.articlewrapperdivcrete {
+	margin-top: 10vh;
+}
+
+.asideleft {
+	display: flex;
+}
+
+[id^="bkgarticleimage"] {
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: var(--colorscreen);
+	background-blend-mode: screen, darken;                                  /* styling background-image */
+	height: 80vh;
+}
+
+#bkgarticleimagex  {
+		background-image: url("../pics/athene/athenearticle3.jpg") ; 
+		display: flex ;
+		flex-direction: column; 
+		align-items: center; 
+											/* Exarchia */
+}
+
+#bkgarticleimagex h2 , #bkgarticleimagex p {
+			font-size: 0.9em;
+			max-width: 90vh;
+			ma
+}
+
+#bkgarticleimagexzante {														/* Zante */
+		background-image: url("../pics/zante/zante1.jpg") ;
+		background-attachment: local;
+}
+
+#bkgarticleimagexzante2 {														/* Zante fin */
+		background-image: url("../pics/zante/zante4.webp") ;
+		background-attachment: fixed;
+}
+
+#bkgarticleimagexgrece {														/* grece */
+		background-image: url("../pics/mainpic3.jpg") ;
+		width: 100%;
+}
+
+#bkgarticleimagexgrece p {
+	font-size: 1em;
+	width: 90vh;
+	padding: 3vh;
+}
+
+[id^="bkgarticleimage"] span {
+		color: var(--white);
+}
+
+[id^="bkgarticleimage"] h3 {
+		font-family: var(--fontgen);
+		font-size: var(--fontsizetitle);
+		color: var(--white);
+		background-color: var(--colorscreenblack);
+		padding: 3vh;
+}
+
+[id^="bkgarticleimage"] p, [id^="bkgarticleimage"] h2 {
+	padding: 8vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+	width: 120vh;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+[id^="articlex"] p {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+											/*je l'ai copié mais bon, je suis
+											 sur qui va marcher sur plein des browsers (est-ce que 
+											 je douvrais ajouter les keyframes express pour les 
+											 browser?) */
+
+	will-change: scroll-position, fadein, opacity;
+	    							
+	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}	
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+[id^="articlex"] h3 {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizesubtitle2);
+	background-color: var(--azur);
+	color: var(--white);
+
+}	
+
+[id^="articlex"] h3:hover {
+    transition: 1s;
+	color:var(--bluedeep) ;
+}
+
+[id^="articlex"] h2 {
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+}	
+
+
+[id^="articlex"] {
+	padding: 3vh;
+	display: flex;
+	flex-direction: column;
+}
+
+[id^="articlex"] img {
+	width: 90vh;
+	margin-top: 10vh;
+}
+
+[id^="articlex"] img:hover {
+		box-shadow: var(--generalshad);
+}
+
+#articlexathene {
+	width: 110vh;
+}
+
+.article2imgflex {
+	display: flex;
+	flex-direction: column;
+} 
+
+
+.articleimgflex p{
+	display: none;
+} 
+
+.articleimgflex h3{
+	display: none;
+} 
+
+
+
+/* buger le text et images dans les article */
+
+
+[class$="imgflex"] {
+}
+
+[class$="imgflex"] p {
+	padding: 5vh;
+}
+
+[id$="xsub"] {
+	padding: 2vh;
+}
+
+/* oveflowgallery modules */
+
+.oveflowgallery {
+	display: flex;
+	overflow-x: scroll;
+	width: 180vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-image: url("../pics/crete/crete6.jpg");
+	object-fit: contain;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-blend-mode: darken, screen;
+
+}
+
+.galleryflexdetails {
+	display: flex;
+	flex-direction: column;
+	object-fit: cover;
+	padding: 2vh;
+}
+
+/* asides   -ax  */
+
+
+[id$="ax"] img {     
+		display: none;
+}
+
+[id$="ax"] {     
+		display: none;
+}
+
+
+#atheneax {
+	display: none;
+}
+
+#acidathenediv {
+	display: none;
+}
+
+
+/* cards */
+
+.cardsection {
+	display: none;
+}
+
+#maingrece h5 {
+	display: none;
+}
+
+#maingrece hr {
+	color: var(--azur);
+}
+
+.cardsection h2 {
+	padding: 2vh;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneralmed);
+	background-color: var(--white);
+	color: var(--black);
+	text-shadow: var(--textshad);
+	box-shadow: var(--generalshad);
+}
+
+.bkgcards {
+	display: flex;
+	flex-direction: column;
+}
+
+.bkgcards h1 {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 2vh;
+	width: 90vh;
+}
+
+.bkgcards tr td {
+	padding: 5vh;
+}
+
+.bkgcards tr td:hover {
+	background-color: var(--azurlight) ;
+}
+ 
+.bkgcards a {
+	color: black;
+}
+
+.bkgcards a span {
+	font-family: var(--fontgen);
+	color: var(--white);
+	background-color: var(--azur);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+	box-shadow: var(--generalshad);
+}
+
+.bkgcards a span:hover {
+	font-family: var(--fontgen);
+	color: var(--white);
+	background-color: var(--bluedeep);
+	padding: 2vh;
+	border: solid  0.1vh var(--azur);
+	transition: 0.2s;
+	box-shadow: var(--generalshad);
+}
+
+[id^="wrapmodal"] {	
+	display: none;
+}
+
+																				/*  ici [id^="wrapmodal"]:target ne marche pas, je ne suis pas sur mais
+																					je crois que c'est liée au fait que il y à deja des id 'wrapmodalform'
+																					donc je douvrais au moins ajouter une 'x' (ea wrapmodal-x-num ). 
+																					J'aurais voulu trouver une fonction pour le faire sans besoin de
+																					devoir tout changer et j'ai recherché sur les pseudo-elements ::before
+																					::after avec l'utilisation de 'content mais ils sont pas destiné a 
+																					l ajout de un partie interne au css.
+
+																				*/
+																	
+#wrapmodal:target, #wrapmodal2:target, #wrapmodal3:target, #wrapmodal4:target,
+#wrapmodal5:target, #wrapmodal6:target {
+	width: 100%;
+	display: block;
+	background-color: var(--beige);
+	color: var(--white);
+}
+
+
+.cardimgcrop {
+	width: 45vh;
+	height: 30vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.cardimgcrop img {
+	width: 55vh;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--beige);
+	padding: 0vh;
+	border-radius: 2vh;
+	box-shadow: var(--generalshad);
+
+}
+
+/* modalcards */
+
+#setdate #setdate1 #setdate2 #setdate3 #setdate4 #setdate5  {
+	font-family: var(--fontgen);
+}
+
+[id^="setdatex"]  {						
+	font-family: var(--fontgen);
+}
+
+[id^="numpeople"] {
+	border: 0px;
+	font-family: var(--fontgen);
+	background-color: var(--bluedeep);
+	color: var(--white);
+	border-radius: 2vh;
+}
+
+.clsbtn {
+	background-color: var(--bluedeep);
+	color: var(--white);
+}
+
+.modalexpe {
+	font-family: var(--fontgen);
+	padding: 15vh;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.modalexpe span {
+	font-size: var(--fontsizedetails);
+
+}
+
+[id^="reservebtn"] {
+	color:  var(--white);
+	background-color: var(--bluedeep);
+	border-radius: 2vh;
+	margin-left: 4vh;
+	cursor: pointer;
+}
+
+
+#reserve1, #reserve2, #reserve3, #reserve4, #reserve5, #reserve6 {
+	display: none;
+	font-size: var(--fontsizegeneral);
+}
+
+[id^="reserve"]:checked   
+~ [id^="reserveform"]
+						{
+	display: none;
+}
+
+[id^="reserveform"] {	
+	display: block;
+	color: var(--white);
+	background-color: var(--bluedeep);
+	z-index: 3;
+}
+
+[id^="reserveform"] form {
+	display: block;
+	color: var(--white);
+	background-color: var(--bluedeep);
+	z-index: 3;
+}
+
+#grecefooter {
+	height: 50vh;
+}
+
+#greceax {
+	display: none;
+}
+
+#articlexcrete {
+	width: 90vh;
+}
+
+#zantetitle{
+	font-size: 2em;
+}
+
+#bkgarticleimagexzante p {
+	width: 90vh;
+	font-size: 1em;
+}
+
+#bkgarticleimagexzante2 p {
+	width: 90vh;
+	font-size: 1em;
+}
+
+}   /* media queries 600px */

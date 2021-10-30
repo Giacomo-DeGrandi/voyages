@@ -34,9 +34,12 @@ you can do it like so:
     --generalshad: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
+@media only screen and (min-width: 600px) {
+
 * {
 	text-align: justify;
 }
+
 
 
 body {
@@ -136,6 +139,7 @@ a {
 	  	display:block;
 	 	color: var(--white);
 	 	border: solid 1px white;
+	 		  	padding: 2vh;
 }
 
 .personnesx:hover .paysx {
@@ -198,7 +202,8 @@ a {
 }
 
 [class^="bkgmainpiccommon"] h1 {
-	display: none;
+	visibility: hidden;
+
 }
 
 [class^="bkgmainpiccommon"] p {
@@ -206,10 +211,23 @@ a {
 }
 
 [class^="bkgmainpiccommon"]:hover h1 {
+	visibility: visible;
 	display: block;
 	position: relative;
 	top: 10vh;
+			-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
+        -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 [class^="bkgmainpiccommon"] a {
 	background-color: var(--blue);
@@ -222,6 +240,9 @@ a {
 	background-attachment: fixed;
 	background-size: contain;
 	background-repeat: no-repeat;
+	animation-duration: 4s;
+   animation-name: slideinleft;
+   animation-iteration-count: 1;
 }
 
 
@@ -231,6 +252,9 @@ a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 2vh ;
+		animation-duration: 4s;
+   animation-name: slideinbottom;
+   animation-iteration-count: 1;
 }
 
 .bkgmainpiccommon2 {
@@ -238,7 +262,40 @@ a {
 	background-attachment: fixed;
 	background-position: 75vh 0.2vh;
 	background-repeat: no-repeat;
+	animation-duration: 4s;
+   animation-name: slideinright;
+   animation-iteration-count: 1;
 }
+
+@keyframes slideinleft {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+
+@keyframes slideinright {
+    from {
+      margin-right: 100%;
+    }
+  
+    to {
+      margin-right: 0%;
+    }
+  }
+
+@keyframes slideinbottom {
+    from {
+      margin-bottom: 100%;
+    }
+  
+    to {
+      margin-bottom: 0%;
+    }
+  }
 
 
 /* spans */
@@ -264,7 +321,7 @@ a {
 .wrappercardintro {
 	padding: 2vh;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	text-align: justify;
 }
 
@@ -288,6 +345,10 @@ a {
 	border: solid 1px black;
 }
 
+.introcommoncardimgcont img {
+	width: 30vh;
+}
+
 .introtextcard {
 	 font-family: var(--fontgen);
 	font-size: var(--fontsizegeneral);
@@ -301,8 +362,6 @@ a {
 	padding: 1vh;
 }
 
-
- /*media queries*/
 
 
 /*  footer  */
@@ -377,3 +436,366 @@ footer li:hover {
 	width: 6vh;
 	position: relative;
 }
+
+
+}																													 /*media queries 1200 */
+
+@media only screen and (max-width: 600px) {						 /*media queries 600 */
+
+* {
+	text-align: justify;
+}
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+.navbar1 {
+	top: 0;
+	position: sticky;
+	background-color: var(--black);
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneralmed);
+	color: var(--white);
+	padding:0.5vh ;
+	justify-content: space-evenly;
+	z-index: 999;
+}
+
+#logo {
+	position: relative;
+}
+
+
+.menulist {
+		background-color: var(--black);
+	left: 30vh;
+	padding: 1vh;
+	position: absolute;
+}
+
+.menulist2 {
+	background-color: var(--black);
+	right: 20vh;
+	position: absolute;
+	box-shadow: var(--generalshad);
+	padding: 1vh;
+
+}
+
+
+.continentsx {
+	display: none;
+	background-color: var(--black);
+}
+
+.paysx {
+	display: none;
+	background-color: var(--black);
+}
+
+.personnesx {
+	display: none;
+	background-color: var(--black);
+
+}
+
+[class^="villes"] {
+	display: none;
+	background-color: var(--black);
+}
+
+
+.menulist:hover .continentsx {
+	  	background-color: var(--blue);
+	  	padding: 2vh;
+		display:block;
+	 	color: var(--white);
+	 	border: solid 1px white;
+
+}
+
+.continentsx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	 	padding: 1vh;
+ 	color: var(--white);
+ 	border: solid 1px white;
+ }
+
+.paysx:hover [class^="villes"] {
+  	background-color: var(--blue);
+	color: var(--white);
+ 	display: block;
+ 	padding: 1vh;
+	border: solid 1px white;
+ 	white-space: nowrap;
+ 	position: absolute;
+ }
+
+.menulist2:hover .personnesx {
+	  	background-color: var(--blue);
+	  	display:block;
+	 	color: var(--white);
+	 	border: solid 1px white;
+	 	padding: 2vh;
+}
+
+.personnesx:hover .paysx {
+	background-color: var(--blue);
+ 	display:inline-block;
+ 	color: var(--white);
+ 	border: solid 1px white;
+ }
+
+[class^="villes"] a:hover {
+	border: solid 1px white;
+
+}
+
+[class^="pays"] a {
+			white-space: nowrap;
+			display: flex;
+	flex-direction: column;
+
+}
+
+
+[class^="pays"] a:hover {
+	border: solid 1px white;
+
+}
+
+
+[class^="villes"] a {
+		white-space: nowrap;
+			display: flex;
+	flex-direction: column;
+}
+
+
+/* Main Common */
+
+.maincommon {
+	font-family: var(--fontlogo);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+}
+
+.maincommon p {
+	  	background-color: var(--black);
+	 	border: solid 1px white;
+	 	padding: 1vh;
+}
+
+
+[class^="bkgmainpiccommon"] {
+	width: 100%;
+	height: 35vh;
+	display: flex;
+	justify-content: safe center;
+	align-items: center;
+}
+
+[class^="bkgmainpiccommon"] h1 {
+	display: none;
+}
+
+[class^="bkgmainpiccommon"] p {
+	position: absolute;
+}
+
+[class^="bkgmainpiccommon"]:hover h1 {
+	display: block;
+	position: relative;
+	top: 10vh;
+}
+
+[class^="bkgmainpiccommon"] a {
+	background-color: var(--blue);
+	border: solid 1px var(--white);
+	padding: 1vh;
+}
+
+.bkgmainpiccommon {
+	background-image: url("../pics/common/liberty.jpg");
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+
+.bkgmainpiccommon1 {
+	background-image: url("../pics/common/indo.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bkgmainpiccommon2 {
+	background-image: url("../pics/common/grece8.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+
+/* spans */
+
+.detailscommon {
+	position: relative ;
+	bottom: 30vh;
+	left: 2vh;
+}
+
+.detailscommon:hover {
+	border: solid 1px var(--white);
+}
+
+	/* section */
+
+.commonintro {
+	color: var(--black);
+}
+
+/* card */
+
+.wrappercardintro {
+	padding: 2vh;
+	display: flex;
+	justify-content: space-evenly;
+	text-align: justify;
+}
+
+.wrappercardintro a {
+	color: black;
+}
+
+.introcommoncard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logogit {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.introcommoncardimgcont {
+	height: 30vh;
+	border: solid 1px black;
+}
+
+.introcommoncardimgcont img {
+	width: 30vh;
+}
+
+.introtextcard {
+	 font-family: var(--fontgen);
+	font-size: var(--fontsizegeneralmed);
+	padding: 1vh;
+
+}
+
+.placesnames {
+	color: var(--white) !important;
+	background-color: var(--blue);
+	border: solid 1px black;
+	padding: 1vh;
+}
+
+
+
+/*  footer  */
+
+footer {
+ 	background-color: black;
+ 	font-family: var(--fontgen);
+	font-size: var(--fontsizegeneral);
+	color: var(--white);
+	max-height: 100vh ;
+	display: flex;
+	flex-direction: column;
+ }
+
+ footer ul {
+	list-style-type: none;
+}
+
+ footer hr {
+	color: var(--white);
+}
+
+
+
+															/* .wrapfooter > div > span {
+																	 	font-family: var(--fontlogo);
+															} */
+
+.logodetails {
+	 	background-color: black;
+	float: right;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizedetails);
+	padding: 2vh;
+	font-style: italic;
+	margin-top: 7vh;
+	margin-left: 7vh;
+	display: none;
+
+}
+
+#copydetails {
+	 	background-color: black;
+	float: right;
+	font-family: var(--fontgen);
+	font-size: var(--fontsizedetails);
+	padding: 2vh;
+}
+
+#logofooter {
+	 	background-color: black;
+		font-family: var(--fontlogo);	
+		position: relative;
+		font-size: var(--fontsizesubtitle);
+		left: 3vh;
+}
+
+footer li:hover {
+	border: solid 1px var(--white);
+}
+
+/* logo pics */
+
+.logospics {
+	padding: 2vh;
+	width: 6vh;
+	position: relative;
+	left: 8vh;
+}
+
+.logospics2 {
+	padding: 2vh;
+	width: 6vh;
+	position: relative;
+}
+
+footer div {
+	 	background-color: black;
+}
+
+
+footer li {
+	 	background-color: black;
+}
+
+
+} 											/*media queries  600 */
