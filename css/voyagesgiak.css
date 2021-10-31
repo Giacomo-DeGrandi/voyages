@@ -224,7 +224,7 @@ a {
 											 je douvrais ajouter les keyframes express pour les 
 											 browser?) */
 
-	will-change: scroll-position fadein opacity;
+	will-change: fadein, opacity;
 	    							
 	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -757,7 +757,7 @@ a {
 											 je douvrais ajouter les keyframes express pour les 
 											 browser?) */
 
-	will-change: scroll-position, fadein, opacity;
+	will-change:fadein, opacity;
 	    							
 	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -769,6 +769,7 @@ a {
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+
 }
 
 
@@ -1306,7 +1307,7 @@ a {
 											 je douvrais ajouter les keyframes express pour les 
 											 browser?) */
 
-	will-change: scroll-position, fadein, opacity;
+	will-change: fadein, opacity;
 	    							
 	    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */      
        -moz-animation: fadein 2s; /* Firefox < 16 */
